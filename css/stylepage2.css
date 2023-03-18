@@ -1,0 +1,96 @@
+.form-container form::before {
+	content: '';
+	position: absolute;
+	top: -20px;
+	left: 15px;
+	width: 10px;
+	height: 10px;
+	
+}
+
+.form-container .tree {
+  padding: 20px 0;
+}
+
+.form-container .tree::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+.form-container .tree div {
+  clear: left;
+}
+
+.form-container input[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.form-container label, a {
+  display: block;
+  float: left;
+  clear: left;
+  position: relative;
+  margin-left: 25px;
+  padding: 5px;
+  border-radius: 5px;
+  color: #5c5d5e;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form-container label::before, a::before {
+  display: block;
+  position: absolute;
+  top: 6px;
+  left: -25px;
+  font-family: 'FontAwesome';
+}
+
+.form-container label::before {
+  content: '\f07b'; /* closed folder */
+}
+
+.form-container input:checked + label::before {
+  content: '\f07c'; /* open folder */
+}
+
+.form-container a::before {
+  content: '\f068'; /* dash */
+}
+
+.form-container input:focus + label, a:focus {
+  outline: none;
+  background-color: #b9c3c9;
+}
+
+.form-container .sub {
+  display: none;
+  float: left;
+  margin-left: 30px;
+}
+
+.form-container input:checked ~ .sub {
+  display: block;
+}
+
+.form-container input[type="reset"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #e8ebed;
+  background-color: #6b7c87;
+  font-family: inherit;
+  font-size: .9em;
+  cursor: pointer;
+  /* -webkit-appearance: none;
+  -moz-appearance: none; */
+}
+
+.form-container input[type="reset"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px #b9c3c9;
+}
